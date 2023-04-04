@@ -52,3 +52,9 @@ worst case: n = h -> O(n)
 ####  balanced Search tree
 
 h = log(n) -> O(logn)
+
+Debugger taks:
+- breakpoints
+- stepping
+- expression evaluation
+- view backtrace
