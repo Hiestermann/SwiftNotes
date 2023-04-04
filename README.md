@@ -53,7 +53,7 @@ worst case: n = h -> O(n)
 
 h = log(n) -> O(logn)
 
-Debugger taks:
+### Debugger taks:
 - breakpoints
 - stepping
 - expression evaluation
