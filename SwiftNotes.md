@@ -63,7 +63,7 @@ class Node {
 #### Merge sort
 
 ```swift
-unc mergeSort(_ arr: [Int]) -> [Int] {
+func mergeSort(_ arr: [Int]) -> [Int] {
     guard arr.count > 1 else {
         return arr
     }
