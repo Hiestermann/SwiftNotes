@@ -1,4 +1,5 @@
 # SwiftNotes
+[Merge Sort](https://github.com/Hiestermann/SwiftNotes/blob/main/SwiftNotes.md#merge-sort)
 
 Enumeration of an array of chars:
 
