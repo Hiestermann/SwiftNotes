@@ -42,6 +42,24 @@ class Node {
     }
 }
 ```
+
+#### Kadane's algorithm
+
+```swift
+ func maxSubArray(_ nums: [Int]) -> Int {
+        if nums.count == 1 { return nums[0] }
+        var maxSum = nums[0]
+        var tempSum = 0
+        for i in nums {
+            tempSum = max(i, tempSum + i)
+            maxSum = max(tempSum, maxSum)
+        }
+
+        return maxSum
+    }
+```
+
+
 ### Time Complecity
 #### unbalanced binary tree
 h = height of binary search tree
