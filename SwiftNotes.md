@@ -171,6 +171,79 @@ func mergeArrays(_ leftA: [Int], _ rightA: [Int]) -> [Int] {
     return newArray
 }
 ```
+
+#### sorted colors
+```swift
+while mid <= end {
+            var item = nums[mid]
+            if item == 0 {
+                nums.swapAt(mid, start)
+                start += 1
+                mid += 1
+            } else if item == 1 {
+                mid += 1
+            } else  if item == 2 {
+                nums.swapAt(mid, end)
+                end -= 1
+            }
+        }
+```
+
+#### three sum
+
+```swift
+    func threeSum(_ nums: [Int]) -> [[Int]] {
+        var seen = [Int]()
+        var elements = Set<[Int]>()
+        
+        for i in 0..<nums.count {
+            seen = [Int]()
+            let first = nums[i]
+            for b in 0..<nums.count {
+                if b != i {
+                var calculation = 0 - first - nums[b]
+
+                    if let e = seen.first { $0 == calculation } {
+                        let ar = [first, nums[b], e]
+                           elements.insert(ar.sorted())
+                           break
+                        }
+                         seen.append(nums[b])
+                    }
+                    
+            }
+        
+        }
+        return Array(elements)
+    }
+```
+
+#### trapping water
+
+```swift
+ func trap(_ height: [Int]) -> Int {
+        var left = 0
+        var right = height.count - 1
+        var leftMax = height[left]
+        var rightMax = height[right]
+        var trappedWater = 0
+
+        while left < right {
+            if height[left] < height[right] {
+                leftMax = max(leftMax, height[left])
+                trappedWater += leftMax - height[left]
+                left += 1
+            } else {
+                rightMax = max(rightMax, height[right])
+                trappedWater += rightMax - height[right]
+                right -= 1
+            }
+        }
+
+        return trappedWater
+    }
+```
+
 ### Time Complecity
 #### unbalanced binary tree
 h = height of binary search tree
