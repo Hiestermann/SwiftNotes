@@ -1,6 +1,7 @@
 # SwiftNotes
 [Merge Sort](https://github.com/Hiestermann/SwiftNotes/blob/main/SwiftNotes.md#merge-sort)
 
+
 Enumeration of an array of chars:
 
 ``` Swift
@@ -60,7 +61,61 @@ class Node {
     }
 ```
 
-#### Merge sort
+#### Merge Sort
+```swift
+    func mergeSort(_ nums: [Int]) -> [Int] {
+        guard nums.count > 1 else { return nums }
+        let mid = nums.count / 2
+        var first = Array(nums[0..<mid])
+        var second = Array(nums[mid..<nums.count])
+
+        let leftArray = mergeSort(first)
+        let rightArray = mergeSort(second)
+
+        return merge(leftArray, rightArray)
+        
+    }
+
+    func merge(_ first: [Int], _ second: [Int]) -> [int_fast16_t] { 
+        var firstStart = 0
+        var secondStart = 0
+
+        var orderdArray = [Int]()
+        while firstStart < first.count && secondStart < second.count {
+
+            let firstElement = first[firstStart]
+            let secondElement = second[secondStart]
+                
+            if firstElement < secondElement {
+                orderdArray.append(firstElement)
+                firstStart += 1
+            } else if secondElement < firstElement {
+                orderdArray.append(secondElement)
+                secondStart += 1
+            } else {
+                orderdArray.append(secondElement)
+                secondStart += 1
+                
+                orderdArray.append(firstElement)
+                firstStart += 1
+            }
+        }
+
+        while firstStart < first.count {
+            orderdArray.append(first[firstStart])
+                firstStart += 1
+        } 
+
+        while secondStart < second.count {
+            orderdArray.append(second[secondStart])
+                secondStart += 1
+        } 
+
+        return orderdArray
+    }
+```
+
+#### Merge two sorted arrays
 
 ```swift
 func mergeSort(_ arr: [Int]) -> [Int] {
