@@ -45,7 +45,7 @@ class Node {
 }
 ```
 
-#### Kadane's algorithm
+#### Kadane's algorithm (max subarray)
 
 ```swift
  func maxSubArray(_ nums: [Int]) -> Int {
