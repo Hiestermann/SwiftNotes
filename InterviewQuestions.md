@@ -1,5 +1,6 @@
 # Questions from the interviewer 
 ## swift
+## what is the difference between a struct and an enum?
 
 ### what is copy on write?
 
