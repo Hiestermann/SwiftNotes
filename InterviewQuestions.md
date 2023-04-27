@@ -32,7 +32,8 @@ We are on branch-A and want to reabase the branch-B into branch-A. We are callin
 
 ![Screenshot 2023-04-27 at 09 50 55](https://user-images.githubusercontent.com/34369988/234903121-fa2edfc3-5d30-4819-8886-fe61a78497ae.png)
 
-
+Do NOT use REbase on commits that you've already pushed/shared on a remote repository!
+Instead, us it for cleaning up your local commit history before merging it into a shared team branch.
 
 # Questions to the interviewer 
 
