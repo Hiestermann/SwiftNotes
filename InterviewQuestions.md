@@ -11,4 +11,5 @@ Merge lets you merge different Git branches. Rebase allows you to integrate the 
 
 # Questions to the interviewer 
 
-- What would be your expectations to make the hiring a success
+- What would be your expectations to make the hiring a success?
+- For what are you looking for in a team mate?
